@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LATIHAN JAVASCRIPT</title>
+</head>
+<body>
+<table>
+	<table width="300" border="0" cellspacing="0" cellpadding="8" >
+	<tr>
+		<td> NIM </td>
+				<td>
+					<label for="nim"></label>
+					<select id="nim_mhs" onclick="pilihNim()">
+						<option value="Pilih Data"> Pilih Data </option>
+						<option value="Muh Amin">A11.2015.12345</option>
+						<option value="Santoso">A11.2015.12346</option>
+						<option value="Sutrisno">A11.2015.12347</option>
+					</select>
+				</td>
+	</tr>
+	
+	<tr>
+		<td> Nama </td>
+		<td><label></label>
+        <Input type="text" id="nama_mhs"></td>
+	</tr>
+	
+	<tr>
+		<td> Nilai Tugas </td>
+		<td><label></label>
+        <Input type="number" id="nilai_tugas" min='1' max='100' placeholder="1-100" required></td>
+	</tr>
+	
+	<tr>
+		<td> Nilai UTS </td>
+		<td><label></label>
+        <Input type="number" id="nilai_uts" min='1' max='100' placeholder="1-100" required></td>
+	</tr>
+	
+	<tr>
+		<td> Nilai UAS </td>
+		<td><label></label>
+        <Input type="number" id="nilai_uas" min='1' max='100' placeholder="1-100" required></td>
+	</tr>
+	
+	<tr>
+		<td> Nilai Akhir </td>
+		<td><label></label>
+        <Input type="text" id="nilai_akhir" disabled></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td><button onclick="hitungNilaiAkhir()">SIMPAN</button></td>
+	</tr>
+	</table>
+	
+	<br>
+	<p id="table"></p>
+	</br>
+
+<script>
+        let data = {}; //global
+
+        const pilihNim = () => {
+            //memberikan nilai dari dom
+            const valueNimMhs = document.getElementById('nim_mhs').selectedIndex;
+            const namaMhs = document.getElementsByTagName("option")[valueNimMhs].value;
+            const valueNamaMhs = document.getElementById('nama_mhs');
+
+            //set value namaMhs ke input
+            valueNamaMhs.value = namaMhs;
+
+            //push ke object data
+            data.nama = valueNamaMhs.value;
+
+            if (valueNamaMhs.value === "Muh Amin") {
+                return data.nim = "A11.2015.12345"
+            } else if (valueNamaMhs.value === "Santoso") {
+                return data.nim = "A11.2015.12346"
+            } else {
+                return data.nim = "A11.2015.1234"
+            }
+        }
+
+        const hitungNilaiAkhir = () => {
+            //ambil nilai dari dom
+            const nilaiTugas = document.getElementById('nilai_tugas');
+            const nilaiUts = document.getElementById('nilai_uts');
+            const nilaiUas = document.getElementById('nilai_uas');
+            const nilaiAkhir = document.getElementById('nilai_akhir');
+
+            //set value
+            let valueNilaiTugas = nilaiTugas.value;
+            let valueNilaiUts = nilaiUts.value;
+            let valueNilaiUas = nilaiUas.value;
+
+            //menghitung NA
+            let hasil = (0.4 * valueNilaiTugas) + (0.3 * valueNilaiUts) + (0.3 * valueNilaiUas);
+            //menampilkan NA pada label
+            nilaiAkhir.value = hasil;
+
+            //push ke object data
+            data.hasil = hasil;
+
+            //menampilkan data
+            const table = document.getElementById('table');
+            table.innerHTML =
+                `<table>
+				<table width="500" border="1" cellspacing="0" cellpadding="0" >
+                    <tr>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Nilai Akhir</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>${data.nim}</td> 
+                        <td>${data.nama}</td>   
+                        <td>${data.hasil}</td>
+                        <td>${hasil > 60 ? 'LULUS' : 'TIDAK LULUS'}</td>
+                    </tr>
+                </table>`
+        }
+    </script>			
+</body>
+</html>
