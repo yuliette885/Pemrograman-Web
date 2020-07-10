@@ -1,0 +1,347 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-image:url(../images/img/bg.jpg);
+	padding: 0;
+	margin: 0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+}
+a, a:visited {
+	text-decoration: none;
+}
+/* wrapper */
+#wrapper {
+	width: 1000px;
+	padding: 20px;
+	margin: 20px auto;
+	background-color: #FFF;
+	border: solid thin #EEE;
+	border-radius: 10px;
+}
+/* top */
+.top {
+	padding: 5px 0;
+	border-bottom: solid thin #EEE;
+	margin-bottom: 10px;
+	text-align: right;
+}
+.top a:hover {
+	color: #096; 
+	font-weight: bold;
+}
+/* header */
+header {
+	min-height: 100px;
+}
+header #logo {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+header #logo img {
+	width: 100px;
+	height: auto;
+}
+header #nama {
+	width: 880px;
+	float: right;
+	padding: 20px 0;
+	font-size: 26px;
+}
+.nama {
+	color: #09C;
+	text-shadow: 1px 1px gray;
+}
+.aipni {
+	color: #900;
+	text-shadow: 1px 1px gray;
+}
+/* nav */
+nav {
+	background-color: #099;
+	border-radius: 5px;
+	margin: 15px 0;
+	height: 50px;
+	color: #FFF;
+	padding: 5px 10px;
+}
+nav ul {
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+nav ul li {
+	float: left;
+	display: inline-block;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+nav ul li a, nav ul li a:visited {
+	padding: 10px 20px;
+	height: 30px;
+	color: #FFF;
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+}
+nav ul li a:hover {
+	background-color: #066;
+	color: #FF0;
+	border-radius: 5px;
+}
+	
+/* cari */
+.cari {
+	border: solid thin #EEE;
+	background-color: #F5F5F5;
+	padding: 10px 20px;
+	min-height: 25px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	
+}
+.cari label {
+	padding: 5px 0;
+}
+.cari input[type='text'], .cari select {
+	padding: 8px 16px;
+	border-radius: 5px;
+	border: solid thin #099;
+}
+.cari input[type='submit'] {
+	padding: 8px 16px;
+	background-color: #099;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	color: #FFF;
+	font-weight: bold;
+}
+.cari input[type='submit']:hover {
+	background-color: #096;
+}
+/* konten */
+.konten {
+	min-height: 200px;
+	height: auto;
+}
+/* slider */
+.slider {
+	height: 300px;
+	width: 600px;
+	background-color: #FFC;
+	float: left;
+	border-radius: 10px;
+	border: solid 1px #EEE;
+}
+.slider img{
+	width: 600px;
+	height: 300px;
+	border-radius: 10px;
+}
+/* anggota */
+.anggota {
+	min-height: 300px;
+	background-color: #F5F5F5;
+	width: 380px;
+	float: right;
+	border-radius: 10px;
+}
+.anggota h3 {
+	background-color: #EEE;
+	color: #099;
+	padding: 10px 20px;
+	border-radius: 8px 8px 0 0;
+	margin-top: 0;
+	font-size: 16px;
+	
+}
+.anggota p {
+	margin: 10px 20px;
+}
+.anggota form {
+	margin: 10px 20px;
+}
+.anggota input[type='text'], .anggota input[type='password'] {
+	padding: 8px 3%;
+	width: 96%;
+}
+.anggota label {
+	display: block;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+.anggota input[type='submit'], .anggota input[type='reset'] {
+	padding: 8px 16px;
+	background-color: #099;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	color: #FFF;
+	font-weight: bold;
+}
+.anggota input[type='submit']:hover, .anggota input[type='reset']:hover {
+	background-color: #096;
+}
+.anggota ul {
+	padding: 10px 20px;
+	margin: 0 20px;
+}
+.anggota ul li {
+	padding: 4px o;
+	border-bottom: dotted thin #CCC;
+}
+.anggota a:hover {
+	color: #F60;
+}
+/* posting */
+.posting {
+	float: left;
+	width: 600px;
+	min-height: 300px;
+	height: auto;
+	border: solid 1px #EEE;
+	border-radius: 10px;
+	color: #666;
+	text-align: justify;
+}
+.posting h3 {
+	padding: 10px 20px;
+	margin-top: 0;
+	background-color: #F5F5F5;
+	color: #099;
+}
+.posting .ringkasan {
+	margin: 10px 20px;
+}
+/* setting tabel */
+table.myform {
+	font-size: 13px;
+	border: solid thin #EEE;
+}
+.myform th, .myform td {
+	text-align:left;
+	vertical-align: top;
+	padding:8px 16px;
+	border-bottom:solid thin #EEE;
+}
+.myform th {
+	background-color:#F5F5F5;
+	font-weight:bold;
+	color:#099;
+}
+/* ringkasan */
+.ringkasan {
+	display: block;
+	clear: both;
+	border-bottom: dotted thin #EEE;
+}
+/*form setting*/
+#login form, form.myform {
+	border:solid thin #EEE;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+#login form {
+	margin:10px 20px;
+}
+#login form label, .myform label {
+	font-weight: bold;
+	display:block;
+	text-transform: capitalize;
+}
+#login input[type='text'], #login input[type='password'], .myform input[type='text'], .myform input[type='password'],
+.myform select, .myform textarea {
+	padding: 6px 12px;
+	background-color: #F5F5F5;
+}
+#login input[type='text'], #login input[type='password'] {
+	width: 94%;
+}
+#login input[type='submit'], #login input[type='reset'],
+.myform input[type='submit'], .myform input[type='reset'],
+a.tambah, a:visited.tambah {
+	background-color: #066;
+	color:#fff;
+	padding: 10px 20px;
+	border:none;
+	border-radius: 5px;
+	cursor:pointer;
+	font-weight:bold;
+	text-shadow: 1px 1px gray;
+	margin-right:10px;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+#login input[type='submit']:hover, #login input[type='reset']:hover,
+.myform input[type='submit']:hover, .myform input[type='reset']:hover,
+a.tambah, a:hover.tambah {
+	background-color:#000;
+}
+#login form a,#login form a:visited {
+	color:#f30;
+}
+#login form a:hover {
+	color:#900;
+}
+.myform th, .myform td {
+	text-align:left;
+	vertical-align: top;
+	padding:8px 16px;
+	border-bottom:solid thin #EEE;
+}
+.myform th {
+	background-color:#F5F5F5;
+	font-weight:bold;
+	color:#099;
+}
+.abu {
+	font-size: 11px;
+	color:#666;
+}
+.merah {
+	color:#F30;
+	font-weight: bold;
+}
+/*warning dan sukses*/
+.warning, .sukses {
+	border-bottom: solid 2px #09C;
+}
+.warning {
+	background-color: #F5F5F5;
+	color:#f00;
+	border-left: solid 8px #F00;
+	padding:10px 20px;
+}
+.sukses {
+	background-color: #F5F5F5;
+	color:#090;
+	border-left: solid 8px #090;
+	padding:10px 20px;
+}
+#login .warning, #login .sukses {
+	margin: 10px 20px;
+}
+/* clearfix */
+.clearfix {
+	margin-bottom: 10px;
+	display: block;
+	clear: both;
+}
+/* footer */
+footer {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border-top: solid 4px #EEE;
+	color: #666;
+}
+footer a, footer a:visited {
+	color: #666;
+}
+footer a:hover {
+	color: #900;
+}
+	
+
